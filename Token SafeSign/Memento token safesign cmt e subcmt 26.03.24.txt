@@ -1,0 +1,57 @@
+> No windows é só instalar as coisas que sai funcionando normalmente sem muito problema
+> 
+- Primeiramente o Linux melhor usado para isso é o [UBUNTU 20 LTS](https://releases.ubuntu.com/focal/) com ele instalado podemos instalar os drivers para o uso.
+
+Downloads Drivers: [Download Safesign (gdamericadosul.com.br)](https://safesign.gdamericadosul.com.br/download)
+
+Com o drive baixado execute `tar -xvf "nome do aquivo"`
+
+Depois `sudo dpkg -i "nome do aquivo"` 
+
+> Lembrando que se pode usar a tecla tab para auto completar as coisa
+> 
+- De primeira ira faltar dependências na instalação entao você ira executar
+
+ 
+
+```powershell
+
+sudo apt update 
+sudp apt upgrade
+// ele vai mostra outro comando para resolver as dependecias 
+
+sudo apt --fix-broken install 
+// com esse comando ele irá instalr as dependencias faltando lembrando que vc deve aceitar que ele instale as dep
+```
+
+Após realizar esse processo de instalação das dependências pode executar novamente  o   `sudo dpkg -i "nome do aquivo"` , que ele tem que instalar normalmente 
+
+- Com isso vc tem o tudo o app do tokenadmin instalado e pode colocar o token
+- Ele deve aparecer como “operacional” para estar em condições de uso.
+
+Ainda falta configurar o Firefox para conseguir usar o token,
+
+[Memento de como instalar o token no linux](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e014f38-4860-480e-8d01-5bfa1a83652f/c906e955-33ea-4664-b2eb-ebf89eac71a7/orientacoes_instalaao_token.pdf)
+
+Memento de como instalar o token no linux
+
+deve ir nas configurações de segurança e ir em dispositivos de segurança → carregar → /usr/lib/libaetpkss.so (pode percorrer o caminho manualmente pelo ambiente gráfico de diretório)
+
+> Tem que ser essa biblioteca adicionada para reconhecer o token no navegador **é justamente nessa parte que não funciona nos Linux posteriores ao 20.**
+> 
+
+---
+
+### Para assinatura digital no SPED
+
+deve se usar o o SDK do a defesa, use o manual de instalação e os repositórios contidos la que tudo deve funcionar normalmente 
+
+Link do repositório do acdefesa: [Downloads - AC Defesa](https://www.acdefesa.mil.br/index.php/downloads)
+
+[Memento (tambem tem no site)](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e014f38-4860-480e-8d01-5bfa1a83652f/56840842-cdf5-4458-8503-2b3f5d317248/Manual_Instalador_da_Aplicao_SDK-Desktop_no_Ubuntu.pdf)
+
+Memento (tambem tem no site)
+
+---
+
+SITE DA CERTIFICADORA: [Suporte | Especialistas para ajudar você | Rede Ideia](https://redeideia.com.br/suporte)
